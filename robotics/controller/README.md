@@ -19,18 +19,18 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
+<!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedin-url] -->
 
 
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
+<!-- <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
@@ -49,7 +49,7 @@
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
-</div>
+</div> -->
 
 
 
@@ -84,18 +84,18 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[Results](./controllerReport.pdf)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Here we implement and tune a trajectory following controller for a 2-degree of freedom(DoF) robotic arm, and a race car.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Content:
+* X-Y PD controller for a robot arm
+* Inverse Kinematics Controller
+* Race car - Implemented using a PD controller - Paths  Linear, Circular, Figure 8
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
-Use the `BLANK_README.md` to get started.
+
+Use the 'controllerReport.ipnyb' to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,16 +103,19 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+<!-- This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples. -->
 
-* [![Next][Next.js]][Next-url]
+* <a href="https://www.gymlibrary.dev/"> <img src="https://www.pollen-robotics.com/img/tools/openai-gym.png"  width="20%" height="20%"> </a>
+* <a href="https://github.com/benelot/pybullet-gym"> <img src="https://opengraph.githubassets.com/40a7500f273ec60ac414d6dd0851062061315a48dbc489e9ad758636a31138d7/benelot/pybullet-gym"  width="20%" height="20%"> </a>
+* [![PyBullet][PyBullet]][PyBulletGym]
+<!-- * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![JQuery][JQuery.com]][JQuery-url] -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,20 +124,27 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+<!-- This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps. -->
+All the code has been written in the controller notebook. 
+The conda environment has been printed in the notebook to ensure installation of the dependencies.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+None
+
+<!-- This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
-  ```
+  ``` -->
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+All the installation Instruction have been specified in the notebook
+
+
+<!-- _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
@@ -148,7 +158,7 @@ _Below is an example of how you can instruct your audience on installing and set
 4. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
-   ```
+   ``` -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -269,3 +279,13 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+
+[OpenAIGym]: <img src="https://mma.prnewswire.com/media/1513369/Educative_Logo.jpg"  width="60%" height="30%">
+[OpenAIGym-url]: https://www.gymlibrary.dev/
+
+[PyBulletGym]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[PyBulletGym-url]: https://github.com/benelot/pybullet-gym
+
+
+[PyBullet]: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bullet_Physics_Logo.svg/250px-Bullet_Physics_Logo.svg.png
+[PyBullet-url]:https://pybullet.org/wordpress/
