@@ -27,7 +27,7 @@ This repository contains work on the under mentioned topics. Each sub-directory 
 - [x] Robotics
     - [x] Sample Based MP
     - [x] Classical Control
-    - [x] MPNet
+    - [] MPNet
 - [x] CN
     - [x] Socket Programming
     - [ ] Network Layer
