@@ -17,7 +17,7 @@ This directory contains work on implementing robot motion algorithms, control sy
 ## Content
 
 - [controller](./controller/) - Classical Control
-- [search](./search/) - Sample-based motion planning
+- [motion planning](./motionPlanning/) - Sample-based motion planning
 - [mpnet](./mpnet) - Motion Plannig Neural Networks
 
 
