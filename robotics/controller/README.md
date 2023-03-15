@@ -54,7 +54,7 @@
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
+<details open>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -84,39 +84,45 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[Results](./controllerReport.pdf)
-
 Here we implement and tune a trajectory following controller for a 2-degree of freedom(DoF) robotic arm, and a race car.
 
 Content:
 * X-Y PD controller for a robot arm
 * Inverse Kinematics Controller
 * Race car - Implemented using a PD controller - Paths  Linear, Circular, Figure 8
+* Play with Kp,Kd to tune trajectory
 
 
 
-Use the 'controllerReport.ipnyb' to get started.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+Use the 'controller.ipnyb' to get started. <br>
+### Results
+> [Results](./controllerReport.pdf).
 
 
 ### Built With
 
 <!-- This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples. -->
 
-* <a href="https://www.gymlibrary.dev/"> <img src="https://www.pollen-robotics.com/img/tools/openai-gym.png"  width="20%" height="20%"> </a>
+* [OpenAIGym][OpenAIGym-url]
+* [PyBulletGym][PyBulletGym-url]
+* [PyBullet][PyBullet-url]
+* [UCSD Racecar](https://github.com/ucsdarclab/RaceCar)
+
+<!-- * <a href="https://www.gymlibrary.dev/"> <img src="https://www.pollen-robotics.com/img/tools/openai-gym.png"  width="20%" height="20%"> </a>
 * <a href="https://github.com/benelot/pybullet-gym"> <img src="https://opengraph.githubassets.com/40a7500f273ec60ac414d6dd0851062061315a48dbc489e9ad758636a31138d7/benelot/pybullet-gym"  width="20%" height="20%"> </a>
+
+
 * [![PyBullet][PyBullet]][PyBulletGym]
-<!-- * [![Next][Next.js]][Next-url]
+* [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
 * [![Svelte][Svelte.dev]][Svelte-url]
 * [![Laravel][Laravel.com]][Laravel-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url] -->
+* [![JQuery][JQuery.com]][JQuery-url]
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -124,10 +130,8 @@ Use the 'controllerReport.ipnyb' to get started.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-<!-- This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps. -->
-All the code has been written in the controller notebook. 
-The conda environment has been printed in the notebook to ensure installation of the dependencies.
+* All the code has been written in the [controller notebook](./controller.ipynb). 
+* The conda env lists all the packages
 
 ### Prerequisites
 
@@ -167,9 +171,16 @@ All the installation Instruction have been specified in the notebook
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+- All code and results are present in the [notebook](./controller.ipynb) 
+- The [notebbok pdf](./controllerReport.pdf) has the results
+- RaceCar Tajectory controller results 
+- <img src="./images/line.png" width=50% height=50%>
+- <img src="./images/circle.png" width=50% height=50%>
+- <img src="./images/figr8.png" width=50% height=50%>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources. -->
+
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,15 +189,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Plan Template Changelog
+- [ ] Item 2
+    - [ ] Item 1
+    - [ ] Item 2
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+<!-- See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues). -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -224,7 +232,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+<!-- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -232,17 +240,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [Purdue CS593-Robotics](https://qureshiahmed.github.io/sp23.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -280,6 +278,10 @@ Use this space to list resources you find helpful and would like to give credit 
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
 
+
+
+
+
 [OpenAIGym]: <img src="https://mma.prnewswire.com/media/1513369/Educative_Logo.jpg"  width="60%" height="30%">
 [OpenAIGym-url]: https://www.gymlibrary.dev/
 
@@ -289,3 +291,4 @@ Use this space to list resources you find helpful and would like to give credit 
 
 [PyBullet]: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bullet_Physics_Logo.svg/250px-Bullet_Physics_Logo.svg.png
 [PyBullet-url]:https://pybullet.org/wordpress/
+
