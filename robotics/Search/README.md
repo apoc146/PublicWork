@@ -97,7 +97,7 @@ Content:
 * Code visualizer for trajectory 
 
 ### Results
-> [Results](./Report.pdf).
+> [Results](./src/Report.pdf).
 
 
 ### Built With
@@ -130,16 +130,16 @@ Content:
 ## Getting Started
 
 *  ```./src/1/``` has - RRT, BiRRT, BiRRT Smoothing for UR5 robort arm and 2d envs.
-*  ```./src/2/``` has - RRT, RRT* for circular/rectangular solid body`
+*  ```./src/2/``` has - RRT, RRT* for circular/rectangular solid body
 
 
 ### Prerequisites
 
-* [RRT Pseudo Code](./img/rrtPseudo.png)
-* [RRTStar Pseudo Code](./img/rrtsPseudo.png)
-* [RRT Algo](./img/rrtStar.png)
-* [BiRRT Pseudo Code](./img/birrtPseudo.png)
-* [UR5 Robot](./img/urf.png)
+* [RRT Pseudo Code](./src/img/rrtPseudo.png)
+* [RRTStar Pseudo Code](./src/img/rrtsPseudo.png)
+* [RRT Algo](./src/img/rrtStar.png)
+* [BiRRT Pseudo Code](./src/img/birrtPseudo.png)
+* [UR5 Robot](./src/img/urf.png)
 * [SAT Theorem](https://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)
 
 
@@ -154,7 +154,7 @@ Content:
 * The conda env file is at ./envs/rob.yaml
 *  To import the env(rob) run:
 ```sh
-conda env create -f \Users\bhat41\Desktop\test_env.yaml
+conda env create -f ./envs/rob.yaml
 ```
 
 
