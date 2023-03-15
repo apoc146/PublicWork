@@ -8,7 +8,6 @@ import math
 import os
 import sys
 
-## Credit: Purdue CS593, code adapted from AtsushiSakai(@Atsushi_twi)
 
 UR5_JOINT_INDICES = [0, 1, 2]
 
@@ -235,9 +234,6 @@ def BiRRT():
         q_nearest_node=find_nearest(q_rand_node,T_curr)
         q_s_node:RRT_Node=steer_to_until(q_nearest_node,q_rand_node)
 
-        # print("shivam")
-        # print(q_s_node)
-        # print("shivam")
 
         ## if q_s != q_nearest
         if(((q_s_node.get_config()==q_nearest_node.get_config()).all())==False):

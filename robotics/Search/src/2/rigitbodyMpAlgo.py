@@ -1,7 +1,7 @@
 """
 Path Planning Sample Code with RRT*
 
-Credit: Purdue CS593, code adapted from AtsushiSakai(@Atsushi_twi)
+Credit - Author: Ahmed Qureshi, code adapted from AtsushiSakai(@Atsushi_twi)
 
 """
 
@@ -472,32 +472,9 @@ class RRT():
 		if(circleRight < rectLeftX or circleLeft > rectRigthX or rectBottomY > circleTop or rectTopY < circleBottom):
 			return False
 
-		## check if circle is inside rectangle
-		# for i in range(int(rectLeftX),int(rectRigthX)):
-		# 	for j in range(int(rectBottomY),int(rectTopY)):
-		# 		if( ((i-circleCenterX)**2+(j-circleCenterY)**2-r**2)<=0):
-		# 			print("INSIDE AREA CHECK\n")
-		# 			return True
-
 		for i in  np.arange(rectLeftX,rectRigthX,0.1) :
 			for j in np.arange(rectBottomY,rectTopY,0.1):
 				if( (math.sqrt((i-circleCenterX)**2+(j-circleCenterY)**2)-r)<0):
-
-					## Uncomment for Logs
-					# print("******* COLLISION DETECTED OPEN*********\n")
-					# print("\nINSIDE AREA CHECK\n")
-					# print("i:",i)
-					# #print("\n")
-					# print("j:",j)
-					# #print("\n")
-					# print("cx:",circleCenterX)
-					# #print("\n")
-					# print("cy:",circleCenterY)
-					# print("dist below:",math.sqrt((i-circleCenterX)**2+(j-circleCenterY)**2)-r)
-					# #print("\n")
-					# print("\nOutside AREA CHECK\n")
-					# print("******* COLLISION DETECTED CLOSE*********\n")
-
 					return True
 		
 		#check center inside
@@ -508,12 +485,6 @@ class RRT():
 
 	def circleCheckUtil(self,ox,oy,w,h,cx,cy,r):
 		return self.circleCollisionCheck(ox,oy,w,h,cx,cy,r)
-
-		##def circleRect(self, cx,  cy,  radius,  rx,  ry,  rw,  rh):
-
-		## def intersects(self, cx,  cy,  radius,  left,  right, bottom, top):
-
-		# return self.intersects(cx,cy,r,ox,ox+w,oy,oy+h)
 	
 	def rectCheckUtil(self,rCenterX,rCenterY,theta,w,h,ox,oy,ow,oh):
 		return self.rectCollisionCheck(rCenterX,rCenterY,theta,w,h,ox,oy,ow,oh)
