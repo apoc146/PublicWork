@@ -1,0 +1,20 @@
+2023-04-01 11:56:55,677 — INFO — Q1.1
+2023-04-01 11:56:57,264 — INFO — Iter (1/200) Mean Reward: 22.43, Loss: 375.86
+2023-04-01 11:56:59,163 — INFO — Iter (2/200) Mean Reward: 24.46, Loss: 438.60
+2023-04-01 11:58:51,555 — INFO — Q1.1
+2023-04-01 11:58:53,219 — INFO — Iter (1/200) Mean Reward: 22.05, Loss: 358.24
+2023-04-01 11:58:55,028 — INFO — Iter (2/200) Mean Reward: 23.64, Loss: 423.75
+2023-04-01 11:58:56,964 — INFO — Iter (3/200) Mean Reward: 26.27, Loss: 506.09
+2023-04-01 11:58:59,196 — INFO — Iter (4/200) Mean Reward: 29.18, Loss: 604.31
+2023-04-01 11:59:01,697 — INFO — Iter (5/200) Mean Reward: 33.38, Loss: 773.72
+2023-04-01 11:59:04,453 — INFO — Iter (6/200) Mean Reward: 34.85, Loss: 794.00
+2023-04-01 11:59:07,814 — INFO — Iter (7/200) Mean Reward: 38.47, Loss: 939.93
+2023-04-01 11:59:10,916 — INFO — Iter (8/200) Mean Reward: 40.26, Loss: 983.68
+2023-04-01 11:59:14,810 — INFO — Iter (9/200) Mean Reward: 43.35, Loss: 1098.98
+2023-04-01 11:59:18,522 — INFO — Iter (10/200) Mean Reward: 46.24, Loss: 1191.58
+2023-04-01 11:59:23,000 — INFO — Iter (11/200) Mean Reward: 48.58, Loss: 1286.99
+2023-04-01 11:59:27,611 — INFO — Iter (12/200) Mean Reward: 52.92, Loss: 1475.51
+2023-04-01 11:59:32,276 — INFO — Iter (13/200) Mean Reward: 53.60, Loss: 1472.84
+2023-04-01 11:59:37,477 — INFO — Iter (14/200) Mean Reward: 55.38, Loss: 1548.74
+2023-04-01 11:59:42,424 — INFO — Iter (15/200) Mean Reward: 56.43, Loss: 1554.32
+2023-04-01 11:59:47,617 — INFO — Iter (16/200) Mean Reward: 60.50, Loss: 1736.34
