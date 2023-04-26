@@ -15,11 +15,8 @@ This is a long description. -->
 This directory contains work on various topics from computer networks and communication . Each sub-directory has it's own readme explaing in detail the work.
 
 ## Content
-
-- [socket and web servers](./socket/) - Socket Programming, HTTP/1.0, HTTP/2.0
-- [Network Layer](./socket/) - WIP
-- [Wireshark Pcap Analysis](./pcap/) - Python Code to analyze the captured pcap file and extract the packets needed.
-
+'lab3.py' has python code to perform analysis on wireless data captured via wireshark  
+<img src="./pcapimg.png">
 
 
 
