@@ -16,7 +16,7 @@ This directory contains work on implementing robot motion algorithms, control sy
 
 ## Content
 
-- [Imitation Learning](https://github.com/apoc146/roboticsProject/tree/checkpoint3) - RRT* guided Imitation Learning for a TurtleBot robot
+- [Imitation Learning](https://github.com/apoc146/roboticsProject/tree/main) - RRT* guided Imitation Learning for a TurtleBot robot
 - [Controller](./controller/) - Classical Control
 - [Motion Planning](./motionPlanning/) - Sample-based motion planning
 - [Policy Gradient](./policyGradient) -  Policy gradient methods to solve gym environments(<b>CartPole-v1 and 2 Link Arm</b>) with discrete and continuous action spaces
