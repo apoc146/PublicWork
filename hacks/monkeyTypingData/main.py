@@ -2,17 +2,18 @@ from splinter import Browser as browser
 import time
 import csv
 import argparse
+import os
 
 def writeToCSV(fileObject, data):
     # Create a CSV writer object
     csv_writer = csv.writer(fileObject)
 
-    # Write the header
-    csv_writer.writerow(['Index', 'Name', 'WMP Accuracy', 'RAW Consistency', 'Date Time'])
+    # # Write the header
+    # csv_writer.writerow(['Index', 'Name', 'WMP Accuracy', 'RAW Consistency', 'Date Time'])
 
     # Write each row to the CSV file
-    for index, row in enumerate(data, start=1):
-        csv_writer.writerow([index] + row)
+    for index, row in enumerate(data, start=0):
+        csv_writer.writerow(row)
 
 #fn to print table data
 def getTableData(tableRow):
@@ -22,7 +23,7 @@ def getTableData(tableRow):
     # Iterate through rows in the table
     cnt=0
     tableData=[]
-    for row in table_element.find_by_xpath('.//tr')[tableRow:tableRow+49]:  # Skip the first row (headers)
+    for row in table_element.find_by_xpath('.//tr')[tableRow:tableRow+51]:  # Skip the first row (headers)
         # Extract and print the text content of each cell in the row
         cell_texts = [cell.text.strip() for cell in row.find_by_xpath('.//td | .//th')]
         cell_cleaned=[]
@@ -32,23 +33,26 @@ def getTableData(tableRow):
             else:
                 cell_cleaned.insert(-1,cell)
         if '' in cell_cleaned:
-            cell_cleaned.remove('')
+            cell_cleaned[cell_cleaned.index('')]=1
         tableRow=cell_cleaned
-        tableData.insert(-1,tableRow)
+        tableData.append(tableRow)
     return (tableData)
 
 
 if __name__ =="__main__":
-    parser = argparse.ArgumentParser
+    # >>>>> Usage <<<<<
+    # >>>>> python main.py -email "EMAIL" -pwd "PWD"
+
+    parser = argparse.ArgumentParser()
     
     # email and pwd
-    parser.add_argument('email', type=str, help='Email address')
-    parser.add_argument('pwd', type=str, help='Password')
+    parser.add_argument('-email', type=str, help='Email address')
+    parser.add_argument('-pwd', type=str, help='Password')
 
     # Parse the cli args
     args = parser.parse_args()
 
-    browser = browser('firefox', profile='/Users/sbhat/Library/Caches/Firefox/Profiles/mji7t4ta.default-release')
+    browser = browser('firefox', headless=True)
     browser.visit('https://monkeytype.com/login')
     ## Accept Cookies
     accept_cookies_btn=browser.find_by_xpath("/html/body/div[8]/div/div[2]/div[2]/div[2]/button[1]")
@@ -56,7 +60,7 @@ if __name__ =="__main__":
 
     # login
     userName=args.email
-    pwd=args.email
+    pwd=args.pwd
     userNameField=browser.find_by_xpath("/html/body/div[9]/div[2]/main/div[2]/div[3]/form/input[1]").fill(userName)
     pwdField=browser.find_by_xpath("/html/body/div[9]/div[2]/main/div[2]/div[3]/form/input[2]").fill(pwd)
     loginBtn=browser.find_by_xpath("/html/body/div[9]/div[2]/main/div[2]/div[3]/form/button[1]")
@@ -72,11 +76,19 @@ if __name__ =="__main__":
     count=0
     verbose=True
     # saving file csv:
-    csv_file=open('output.csv', 'w', newline='')
+    csv_file_path="./output.csv"
+      
+    # # Check if the file exists
+    if os.path.exists(csv_file_path):
+        os.system("rm -f {}".format(csv_file_path))
+        
+    csv_file=open(csv_file_path, 'w', newline='')
+
+  
     while (count<10000):
         scrollScript = "document.evaluate('//table', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });"
         browser.execute_script(scrollScript)
-        time.sleep(1.5)
+        time.sleep(2)
         data=getTableData(count)
         if verbose:
             for row in data:
