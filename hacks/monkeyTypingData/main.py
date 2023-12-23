@@ -5,25 +5,20 @@ import argparse
 import os
 
 def writeToCSV(fileObject, data):
-    # Create a CSV writer object
     csv_writer = csv.writer(fileObject)
 
-    # # Write the header
-    # csv_writer.writerow(['Index', 'Name', 'WMP Accuracy', 'RAW Consistency', 'Date Time'])
-
-    # Write each row to the CSV file
     for index, row in enumerate(data, start=0):
         csv_writer.writerow(row)
 
 #fn to print table data
 def getTableData(tableRow):
 
-    # Find the table element using XPath
     table_element = browser.find_by_xpath('/html/body/div[8]/div/div/div[2]/div[1]/div[2]/table').first
+
     # Iterate through rows in the table
     cnt=0
     tableData=[]
-    for row in table_element.find_by_xpath('.//tr')[tableRow:tableRow+51]:  # Skip the first row (headers)
+    for row in table_element.find_by_xpath('.//tr')[tableRow:tableRow+51]:
         # Extract and print the text content of each cell in the row
         cell_texts = [cell.text.strip() for cell in row.find_by_xpath('.//td | .//th')]
         cell_cleaned=[]
@@ -99,32 +94,3 @@ if __name__ =="__main__":
 
     time.sleep(5)
     exit(0)
-
-    count=0
-    while (count<200):
-        scrollScript = "document.evaluate('//table', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });"
-        browser.execute_script(scrollScript)
-        time.sleep(1)
-        count+=50
-
-        getDataScript="document.evaluate('//table[1]//tr[position() > 1]/td', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);"
-        browser.execute_script(scrollScript)
-
-        ## save data
-        table=getTableElements()
-        printTable()
-
-    time.sleep(10)
-    browser.quit()
-
-
-# browser.find_by_name('q').fill('splinter - python acceptance testing for web applications')
-# browser.find_by_name('btnK').click()
-
-# if browser.is_text_present('splinter.readthedocs.io'):
-#     print("Yes, the official website was found!")
-
-# else:
-#     print("No, it wasn't found... We need to improve our SEO techniques")
-
-# browser.quit()
