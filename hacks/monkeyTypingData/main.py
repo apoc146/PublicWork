@@ -1,0 +1,118 @@
+from splinter import Browser as browser
+import time
+import csv
+import argparse
+
+def writeToCSV(fileObject, data):
+    # Create a CSV writer object
+    csv_writer = csv.writer(fileObject)
+
+    # Write the header
+    csv_writer.writerow(['Index', 'Name', 'WMP Accuracy', 'RAW Consistency', 'Date Time'])
+
+    # Write each row to the CSV file
+    for index, row in enumerate(data, start=1):
+        csv_writer.writerow([index] + row)
+
+#fn to print table data
+def getTableData(tableRow):
+
+    # Find the table element using XPath
+    table_element = browser.find_by_xpath('/html/body/div[8]/div/div/div[2]/div[1]/div[2]/table').first
+    # Iterate through rows in the table
+    cnt=0
+    tableData=[]
+    for row in table_element.find_by_xpath('.//tr')[tableRow:tableRow+49]:  # Skip the first row (headers)
+        # Extract and print the text content of each cell in the row
+        cell_texts = [cell.text.strip() for cell in row.find_by_xpath('.//td | .//th')]
+        cell_cleaned=[]
+        for cell in cell_texts:
+            if "\n" in cell:
+                cell_cleaned+=cell.split("\n")
+            else:
+                cell_cleaned.insert(-1,cell)
+        if '' in cell_cleaned:
+            cell_cleaned.remove('')
+        tableRow=cell_cleaned
+        tableData.insert(-1,tableRow)
+    return (tableData)
+
+
+if __name__ =="__main__":
+    parser = argparse.ArgumentParser
+    
+    # email and pwd
+    parser.add_argument('email', type=str, help='Email address')
+    parser.add_argument('pwd', type=str, help='Password')
+
+    # Parse the cli args
+    args = parser.parse_args()
+
+    browser = browser('firefox', profile='/Users/sbhat/Library/Caches/Firefox/Profiles/mji7t4ta.default-release')
+    browser.visit('https://monkeytype.com/login')
+    ## Accept Cookies
+    accept_cookies_btn=browser.find_by_xpath("/html/body/div[8]/div/div[2]/div[2]/div[2]/button[1]")
+    accept_cookies_btn.click()
+
+    # login
+    userName=args.email
+    pwd=args.email
+    userNameField=browser.find_by_xpath("/html/body/div[9]/div[2]/main/div[2]/div[3]/form/input[1]").fill(userName)
+    pwdField=browser.find_by_xpath("/html/body/div[9]/div[2]/main/div[2]/div[3]/form/input[2]").fill(pwd)
+    loginBtn=browser.find_by_xpath("/html/body/div[9]/div[2]/main/div[2]/div[3]/form/button[1]")
+    loginBtn.click()
+
+    # open leader board
+    browser.find_by_xpath("/html/body/div[9]/div[2]/header/nav/button[1]/div/i").click()
+
+    time.sleep(2)
+
+
+
+    count=0
+    verbose=True
+    # saving file csv:
+    csv_file=open('output.csv', 'w', newline='')
+    while (count<10000):
+        scrollScript = "document.evaluate('//table', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });"
+        browser.execute_script(scrollScript)
+        time.sleep(1.5)
+        data=getTableData(count)
+        if verbose:
+            for row in data:
+                print(row)
+        writeToCSV(csv_file,data)
+        count+=50
+    csv_file.close()
+
+    time.sleep(5)
+    exit(0)
+
+    count=0
+    while (count<200):
+        scrollScript = "document.evaluate('//table', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });"
+        browser.execute_script(scrollScript)
+        time.sleep(1)
+        count+=50
+
+        getDataScript="document.evaluate('//table[1]//tr[position() > 1]/td', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);"
+        browser.execute_script(scrollScript)
+
+        ## save data
+        table=getTableElements()
+        printTable()
+
+    time.sleep(10)
+    browser.quit()
+
+
+# browser.find_by_name('q').fill('splinter - python acceptance testing for web applications')
+# browser.find_by_name('btnK').click()
+
+# if browser.is_text_present('splinter.readthedocs.io'):
+#     print("Yes, the official website was found!")
+
+# else:
+#     print("No, it wasn't found... We need to improve our SEO techniques")
+
+# browser.quit()
