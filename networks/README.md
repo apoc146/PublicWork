@@ -81,7 +81,7 @@ The source code for all projects and analyses can be found in the [`src`](./src)
 ### 2. Develop a Web Server over HTTP/1.1
 Implement a basic web server (server1.c) with specific HTTP response functionalities, including error handling. Its able to send test files like text.html, picture.html, and bigpicture.html, and handle browser connections for testing.
 
-### Deliverables:
+#### Deliverables:
 - **Server Code:** `server1.c`
   - Implementation of a simple web server.
 
@@ -93,7 +93,7 @@ Implement a basic web server (server1.c) with specific HTTP response functionali
   - `picture.html`: HTML file containing text and a small picture (< 200KB).
   - `bigpicture.html`: HTML file containing text and a big picture (> 1MB).
 
-### Testing Deliverables:
+#### Testing Deliverables:
 
 - Verify HTTP request format visibility in server console.
 - Test server-client interaction for different HTTP requests and responses.
@@ -120,6 +120,32 @@ Implement a basic web server (server1.c) with specific HTTP response functionali
 <em>Figure 2.2: Client (browser) sends video and image test</em>
 </div>
 
+</div>
+
+### 3. Develop a Web Server over HTTP/2.0
+Implementation of HTTP/2.0 support in client-server communication for efficient retrieval of multiple webpage objects.
+
+**Deliverables:**
+
+1. **Code Modification:**
+   - Update client and server code to support HTTP/2.0.
+   - Save modified code as `client2.c` and `server2.c`.
+
+2. **Testing and Comparison:**
+   - Deploy server and client locally to compare HTTP/1.1 and HTTP/2.0 performance.
+   - Test with `video.html` and analyze loading process differences.
+   
+3. **Deployment and Comparison:**
+   - Deploy HTTP/1.1 and HTTP/2.0 servers on different ports.
+   - Run clients on separate hosts to observe simultaneous GET requests.
+
+<div align="center">
+  <img src="img/A1.png" alt="Server Client over local-machine:port" width="350px" height="150px">
+  <img src="img/A2.png" alt="Server Client over local-machine:port" width="350px" height="150px">
+  <br>
+  <div style="width: 700px; text-align: center;">
+    <em>Figures 3: Server establishing connections with clients over TCP on the same and different machines, respectively.</em>
+  </div>
 </div>
 
 
