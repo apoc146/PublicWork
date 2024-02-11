@@ -78,8 +78,50 @@ The source code for all projects and analyses can be found in the [`src`](./src)
 
 
 
-### 2 Develop Your Web Server over HTTP/1.1
+### 2. Develop a Web Server over HTTP/1.1
 Implement a basic web server (server1.c) with specific HTTP response functionalities, including error handling. Its able to send test files like text.html, picture.html, and bigpicture.html, and handle browser connections for testing.
+
+### Deliverables:
+- **Server Code:** `server1.c`
+  - Implementation of a simple web server.
+
+- **Client Code:** `client1.c`
+  - Revised client code to test server functionality, with the browser acting as the client in this context.
+
+- **Test Files:**
+  - `text.html`: HTML file containing text only.
+  - `picture.html`: HTML file containing text and a small picture (< 200KB).
+  - `bigpicture.html`: HTML file containing text and a big picture (> 1MB).
+
+### Testing Deliverables:
+
+- Verify HTTP request format visibility in server console.
+- Test server-client interaction for different HTTP requests and responses.
+- Connect to the server from a browser using the specified URL format.
+- Test server responses for 404 (Not Found), 400 (Bad Request), and 505 (HTTP Version Not Supported) errors.
+
+<div align="center">
+
+<img src="img/B1.png" alt="Server Client over local-machine:port" width="350px">
+<br>
+<div style="width: 350px; text-align: center;">
+<em>Figure 2.1: Server listens for client (browser)</em>
+</div>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<img src="img/B2.png" alt="Server Client over local-machine:port" width="350px">
+<br>
+<div style="width: 350px; text-align: center;">
+<em>Figure 2.2: Client (browser) sends video and image test</em>
+</div>
+
+</div>
+
 
 <!-- LICENSE -->
 ## License
