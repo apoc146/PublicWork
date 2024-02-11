@@ -45,7 +45,7 @@ This repo dives into challenges and methodologies surrounding the security aspec
 - **Tools:**
   - ART (Adversarial Robustness Toolbox)
 
-## [Papers Reviews Se](#papers-reviews)
+## [Papers Reviews Section](#papers-reviews)
 
 ## Results
 
