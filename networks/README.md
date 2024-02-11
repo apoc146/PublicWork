@@ -14,9 +14,8 @@ This directory contains work on various topics from computer networks and commun
 
 The source code for all projects and analyses can be found in the [`src`](./src) directory. Below are some highlighted results from the work:
 
-<details>
-<summary><strong>1. Build Client-Server over Socket Programming</strong></summary>
-  
+<details >
+<summary><strong>1. Build Client-Server over Socket Programming</strong><a href="./socket/">[code]</a></summary>
 ### Functionality:
   
 #### 1.1. Client-server communication:
@@ -58,10 +57,8 @@ The source code for all projects and analyses can be found in the [`src`](./src)
   
 </details>
 
-<br>
-
 <details>
-<summary><strong>2. Develop a Web Server over HTTP/1.1</strong></summary>
+<summary><strong>2. Develop a Web Server over HTTP/1.1</strong></strong><a href="./socket/">[code]</a></summary></summary>
 
 Implement a basic web server (server1.c) with specific HTTP response functionalities, including error handling. Its able to send test files like text.html, picture.html, and bigpicture.html, and handle browser connections for testing.
 
@@ -103,10 +100,8 @@ Implement a basic web server (server1.c) with specific HTTP response functionali
 
 </details>
 
-<br>
-
 <details>
-<summary><strong>3. Develop a Web Server over HTTP/2.0</strong></summary>
+<summary><strong>3. Develop a Web Server over HTTP/2.0</strong><a href="./socket/">[code]</a></summary>
 
 Implementation of HTTP/2.0 support in client-server communication for efficient retrieval of multiple webpage objects.
 
@@ -135,6 +130,96 @@ Implementation of HTTP/2.0 support in client-server communication for efficient 
 
 </details>
 
+<details>
+<summary><strong>4. Network Simulator that Supports Distance Vector Routing</strong><a href="./dv/">[code]</a></summary>
+
+Implementing a Distance Vector (DV) routing algorithm involves initializing and updating routing tables per node in a static network topology, ensuring convergence for accurate routing decisions. Key functions include rtinit for initialization and rtupdate for updates based on received packets.
+
+### Execution Instructions:
+
+To compile the code, use the following command:
+
+```bash
+gcc mainA.c -o mainA
+./mainA 50 "./topo_4.txt"
+```
+
+<div align="center">
+
+<img src="img/A2-1.png" alt="topology and corresponding link costs" width="350px">
+<br>
+<em>Figure 4.1: Topology and corresponding link costs</em>
+</div>
+
+<br>
+
+<div align="center">
+
+<img src="img/A2-2.png" alt="Server Client over local-machine:port" width="350px">
+<br>
+<em>Figure 4.2: Distance Vector run on given topology</em>
+</div>
+
+</details>
+
+
+
+
+<details >
+<summary><strong>5. Traffic Routing over a Static Topology</strong><a href="./dv/">[code]</a></summary>
+
+Implement traffic routing using the generated forward table from the DV routing algorithm to route incoming network traffic.
+
+### Execution Instructions:
+
+To compile the code, use the following command:
+
+```bash
+gcc mainB.c -o mainB
+./mainB 12 "./topo_4.txt" "./traffic_4.txt"
+
+#[structure]
+./mainB k max [Input topo file path] [Input traffic file path]
+# where k max is the maximum number of simulation slots to make algorithm converge.
+```
+
+
+
+<div align="center">
+
+<img src="img/A2-3.png" alt="Traffic Routing over a dynamic Topology" width="250px">
+<br>
+<em>Figure 5.1: Traffic Routing over a Static Topology</em>
+</div>
+
+</details>
+
+
+<details >
+<summary><strong>6. Traffic Routing over a Dynamic Topology</strong><a href="./dv/">[code]</a></summary>
+
+Update link costs based on current traffic volume, incorporating packet transmission rates between nodes. Execute Part 5 functionalities first at each simulation slot, followed by updating link costs. These updated costs will inform the next slot's DV updates for efficient routing.
+
+### Execution Instructions:
+
+To compile the code, use the following command:
+
+```bash
+gcc mainC.c -o mainC
+./mainC 12 "./topo_4.txt" "./traffic_4.txt"
+```
+
+
+
+<div align="center">
+
+<img src="img/A2-4.png" alt="Traffic Routing over a dynamic Topology" width="250px">
+<br>
+<em>Figure 5.1: Traffic Routing over a dynamic Topology</em>
+</div>
+
+</details>
+
 
 ## License
 Not Distributed
@@ -150,6 +235,3 @@ Shivam - [bhat41@purdue.edu](mailto:bhat41@purdue.edu)
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 * [Course : CS536 - Data Communication And Computer Networks](https://www.cs.purdue.edu/homes/chunyi/teaching/cs536-sp23/cs536-sp23.html)
-
-
-
