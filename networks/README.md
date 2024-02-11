@@ -38,31 +38,43 @@ The source code for all projects and analyses can be found in the [`src`](./src)
 1.3. **Multi-client support on server:**
    - Revise server code to handle multiple client connections concurrently using Pthreads.
    - Clients can connect from different machines and interact with the server simultaneously.
-<div style="display: flex; justify-content: center;">
 
-  <div style="margin-right: 20px;">
-    <img src="img/A1.png" alt="Server Client over local-machine:port" width="350px">
-    <div style="width: 350px; text-align: center;">
-      <em>Figure 1.1: Server opens a server process to client over TCP on the same machine and port.</em>
-    </div>
-  </div>
+<div align="center">
 
-  <div style="margin-right: 20px;">
-    <img src="img/A2.png" alt="Server Client over local-machine:port" width="350px">
-    <div style="width: 350px; text-align: center;">
-      <em>Figure 1.2: Server opens a server process to client over TCP on different machines and port.</em>
-    </div>
-  </div>
-
-  <div style="margin-right: 20px;">
-    <img src="img/A3.png" alt="Single Server Multi Client commmunication" width="350px">
-    <div style="width: 350px; text-align: center;">
-      <em>Figure 1.3: A single server communicates with multiple clients over TCP connections using Pthreads, each on different machines and ports.</em>
-    </div>
-  </div>
+<img src="img/A1.png" alt="Server Client over local-machine:port" width="350px">
+<br>
+<div style="width: 350px; text-align: center;">
+<em>Figure 1.1: Server opens a server process to client over TCP on the same machine and port.</em>
+</div>
 
 </div>
 
+<br>
+
+<div align="center">
+
+<img src="img/A2.png" alt="Server Client over local-machine:port" width="350px">
+<br>
+<div style="width: 350px; text-align: center;">
+<em>Figure 1.2: Server opens a server process to client over TCP on different machines and port.</em>
+</div>
+
+</div>
+
+
+<br>
+
+<div align="center">
+
+<img src="img/A3.png" alt="Single Server Multi Client commmunication" width="350px">
+<br>
+<div style="width: 350px; text-align: center;">
+<em>Figure 1.3: A single server communicates with multiple clients over TCP connections using Pthreads, each on different machines and ports.</em>
+</div>
+
+</div>
+
+<br>
 
 
 
