@@ -14,9 +14,9 @@ This directory contains work on various topics from computer networks and commun
 
 The source code for all projects and analyses can be found in the [`src`](./src) directory. Below are some highlighted results from the work:
 
-<details >
+<details>
 <summary><strong>1. Build Client-Server over Socket Programming</strong><a href="./socket/">[code]</a></summary>
-### Functionality:
+**Deliverables:**
   
 #### 1.1. Client-server communication:
 - Enable client and server to communicate over TCP/IP sockets.
@@ -131,7 +131,7 @@ Implementation of HTTP/2.0 support in client-server communication for efficient 
 </details>
 
 <details>
-<summary><strong>4. Network Simulator that Supports Distance Vector Routing</strong><a href="./dv/">[code]</a></summary>
+<summary><strong>4. Network Simulator that Supports Distance Vector Routing</strong><a href="./src/dv/">[code]</a></summary>
 
 Implementing a Distance Vector (DV) routing algorithm involves initializing and updating routing tables per node in a static network topology, ensuring convergence for accurate routing decisions. Key functions include rtinit for initialization and rtupdate for updates based on received packets.
 
@@ -166,7 +166,7 @@ gcc mainA.c -o mainA
 
 
 <details >
-<summary><strong>5. Traffic Routing over a Static Topology</strong><a href="./dv/">[code]</a></summary>
+<summary><strong>5. Traffic Routing over a Static Topology</strong><a href="./src/dv/">[code]</a></summary>
 
 Implement traffic routing using the generated forward table from the DV routing algorithm to route incoming network traffic.
 
@@ -196,7 +196,7 @@ gcc mainB.c -o mainB
 
 
 <details >
-<summary><strong>6. Traffic Routing over a Dynamic Topology</strong><a href="./dv/">[code]</a></summary>
+<summary><strong>6. Traffic Routing over a Dynamic Topology</strong><a href="./src/dv/">[code]</a></summary>
 
 Update link costs based on current traffic volume, incorporating packet transmission rates between nodes. Execute Part 5 functionalities first at each simulation slot, followed by updating link costs. These updated costs will inform the next slot's DV updates for efficient routing.
 
