@@ -15,7 +15,7 @@ This directory contains work on various topics from computer networks and commun
 The source code for all projects and analyses can be found in the [`src`](./src) directory. Below are some highlighted results from the work:
 
 <details>
-<summary><strong>1. Build Client-Server over Socket Programming</strong><a href="./socket/">[code]</a></summary>
+<summary><strong>1. Build Client-Server over Socket Programming</strong><a href="./src/socket/">[code]</a></summary>
 **Deliverables:**
   
 #### 1.1. Client-server communication:
@@ -58,7 +58,7 @@ The source code for all projects and analyses can be found in the [`src`](./src)
 </details>
 
 <details>
-<summary><strong>2. Develop a Web Server over HTTP/1.1</strong></strong><a href="./socket/">[code]</a></summary></summary>
+<summary><strong>2. Develop a Web Server over HTTP/1.1</strong></strong><a href="./src/socket/">[code]</a></summary></summary>
 
 Implement a basic web server (server1.c) with specific HTTP response functionalities, including error handling. Its able to send test files like text.html, picture.html, and bigpicture.html, and handle browser connections for testing.
 
@@ -101,7 +101,7 @@ Implement a basic web server (server1.c) with specific HTTP response functionali
 </details>
 
 <details>
-<summary><strong>3. Develop a Web Server over HTTP/2.0</strong><a href="./socket/">[code]</a></summary>
+<summary><strong>3. Develop a Web Server over HTTP/2.0</strong><a href="./src/socket/">[code]</a></summary>
 
 Implementation of HTTP/2.0 support in client-server communication for efficient retrieval of multiple webpage objects.
 
