@@ -28,6 +28,7 @@ This repo dives into challenges and methodologies surrounding the security aspec
   - Python
 - **Machine Learning & Deep Learning Libraries:**
   - Scikit-learn
+  - Pytorch
   - TensorFlow
   - Keras
 - **Data Processing & Analysis:**
