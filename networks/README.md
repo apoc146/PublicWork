@@ -21,25 +21,60 @@ This directory contains work on various topics from computer networks and commun
 - [Wireshark Pcap Analysis](./pcap/) - Python Code to analyze the captured pcap file and extract the packets needed.
 
 
+## Results
+
+The source code for all projects and analyses can be found in the [`src`](./src) directory. Below are some highlighted results from the work:
+
+### 1. Build Client-Server over Socket Programming
+#### Functionality:
+1.1. **Client-server communication:**
+   - Enable client and server to communicate over TCP/IP sockets.
+   - Client sends messages to server, which responds back.
+   
+1.2. **Support for different machines:**
+   - Modify code to accept IP address and port number as command line arguments.
+   - Test initially on localhost, then configure for specified machines.
+   
+1.3. **Multi-client support on server:**
+   - Revise server code to handle multiple client connections concurrently using Pthreads.
+   - Clients can connect from different machines and interact with the server simultaneously.
+
+<div align="center">
+
+<img src="img/A1.png" alt="Server Client over local-machine:port" width="350px">
+<br>
+<div style="width: 350px; text-align: center;">
+<em>Figure 1: Server opens a server process to client over TCP on the same machine and port.</em>
+</div>
+
+</div>
+
+<br>
+
+<div align="center">
+
+<img src="img/A2.png" alt="Server Client over local-machine:port" width="350px">
+<br>
+<div style="width: 350px; text-align: center;">
+<em>Figure 2: Server opens a server process to client over TCP on different machines and port.</em>
+</div>
+
+</div>
 
 
+<br>
 
-## Contributing
+<div align="center">
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+<img src="img/A3.png" alt="Single Server Multi Client commmunication" width="350px">
+<br>
+<div style="width: 350px; text-align: center;">
+<em>Figure 3: A single server communicates with multiple clients over TCP connections using Pthreads, each on different machines and ports.</em>
+</div>
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+</div>
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
+<br>
 
 <!-- LICENSE -->
 ## License
