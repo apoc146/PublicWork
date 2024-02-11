@@ -6,32 +6,56 @@ This directory contains work on network communication, featuring socket programm
 
 ## Content
 
-1. **Build Client-Server over Socket Programming**
-   - Client-server communication
-   - Support for different machines
-   - Multi-client support on server
+<details>
+<summary><strong>1. Build Client-Server over Socket Programming</strong></summary>
 
-2. **Develop a Web Server over HTTP/1.1**
-   - Implementation of a simple web server
-   - Testing deliverables and error handling
+- Client-server communication
+- Support for different machines
+- Multi-client support on server
 
-3. **Develop a Web Server over HTTP/2.0**
-   - Code modification for HTTP/2.0 support
-   - Testing and comparison with HTTP/1.1
-   - Deployment and comparison of servers
+</details>
 
-4. **Network Simulator for Distance Vector Routing**
-   - DV routing algorithm implementation
-   - Initialization and updates of routing tables
+<details>
+<summary><strong>2. Develop a Web Server over HTTP/1.1</strong></summary>
 
-5. **Traffic Routing over Static and Dynamic Topologies**
-   - Traffic routing using DV routing algorithm
-   - Execution instructions and simulation slots
+- Implementation of a simple web server
+- Testing deliverables and error handling
 
-6. **Capture and Analyze Data Packets**
-   - Packet capture using Wireshark
-   - Packet analysis for network information
-   - Python script for analyzing pcap files
+</details>
+
+<details>
+<summary><strong>3. Develop a Web Server over HTTP/2.0</strong></summary>
+
+- Code modification for HTTP/2.0 support
+- Testing and comparison with HTTP/1.1
+- Deployment and comparison of servers
+
+</details>
+
+<details>
+<summary><strong>4. Network Simulator for Distance Vector Routing</strong></summary>
+
+- DV routing algorithm implementation
+- Initialization and updates of routing tables
+
+</details>
+
+<details>
+<summary><strong>5. Traffic Routing over Static and Dynamic Topologies</strong></summary>
+
+- Traffic routing using DV routing algorithm
+- Execution instructions and simulation slots
+
+</details>
+
+<details>
+<summary><strong>6. Capture and Analyze Data Packets</strong></summary>
+
+- Packet capture using Wireshark
+- Packet analysis for network information
+- Python script for analyzing pcap files
+
+</details>
 
 ## Stack
 <details open>
@@ -39,12 +63,14 @@ This directory contains work on network communication, featuring socket programm
 
 | Category                 | Tools and Technologies                      |
 |--------------------------|---------------------------------------------|
-| **Programming Languages** | C, C++, Python                                    |
+| **Programming Languages** | <span style="color:#FFD700">C</span>, <span style="color:#FFD700">C++</span>, Python                                    |
 | **Network Protocols**     | TCP/IP, HTTP/1.0, HTTP/1.1, HTTP/2.0         |
 | **Networking Concepts**   | Socket Programming, Web Server Development, Distance Vector Routing Algorithm |
 | **Course Concepts**       | Client-Server Communication, Multi-threading (Pthreads), Packet Analysis, Routing Algorithms |
 | **Tools and Libraries**   | GCC Compiler, Wireshark, Pthreads           |
 | **Operating System**      | Unix/Linux                                   |
+</details>
+
 
 For more details, please refer to the [course website](https://www.cs.purdue.edu/homes/chunyi/teaching/cs536-sp23/cs536-sp23.html).
 </details>
@@ -54,7 +80,7 @@ For more details, please refer to the [course website](https://www.cs.purdue.edu
 
 The source code for all projects and analyses can be found in the [`src`](./src) directory. Below are some highlighted results from the work:
 
-<details>
+<details open>
 <summary><strong>1. Build Client-Server over Socket Programming</strong><a href="./src/socket/">[code]</a></summary>
 **Deliverables:**
   
