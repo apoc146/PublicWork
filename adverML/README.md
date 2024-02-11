@@ -1,4 +1,5 @@
 # Adversarial Machine Learning
+<section id="readme-top"></section>
 
 <!-- ![banner]() -->
 
@@ -43,9 +44,12 @@ This repo dives into challenges and methodologies surrounding the security aspec
 - **Tools:**
   - ART (Adversarial Robustness Toolbox)
 
+## [Papers Reviews Se](#papers-reviews)
+
 ## Results
 
-Here are some of the results for a quick preview
+The source code for all projects and analyses can be found in the [`src`](./src) directory. Below are some highlighted results from the work:
+
 
 ### Non Targeted Attack
 
@@ -53,7 +57,7 @@ Here are some of the results for a quick preview
 
 ![Making a Neural Network misclassify an adversarial image as 'Number 2'](img/nontargetAttack.png)
 
-<em> Figure 1:Figure: An illustration of an no targeted evasion attack, where a neural network is tricked into misclassifying an adversarial image as 'Number 2'.</em>
+<em> Figure 1: An illustration of an targeted evasion attack, where a neural network is tricked into misclassifying an adversarial image as 'Number 2'.</em>
 </div>
 
 ### Targeted Attack
@@ -119,50 +123,42 @@ Here are some of the results for a quick preview
 </div>
 </br>
 
+## Papers Reviews
 
+1. [Dos and Don'ts of Machine Learning in Computer Security](https://www.usenix.org/system/files/sec22summer_arp.pdf)  
+   - Summary: Discusses best practices and pitfalls in utilizing machine learning techniques for enhancing computer security.
+   - [Paper Review](./Paper%20Review/Review1.pdf)
 
-<!-- ## Contributing -->
+2. [6thSense: A Context-aware Sensor-based Attack Detector for Smart Devices](https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/sikder)  
+   - Summary: Presents 6thSense, a novel attack detection system for smart devices leveraging context-aware sensor data.
+   - [Paper Review](./Paper%20Review/Review2.pdf)
 
-<!-- Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+3. [SoK: Security and Privacy in Machine Learning](https://oaklandsok.github.io/papers/papernot2018.pdf)  
+   - Summary: Provides a comprehensive survey of the security and privacy challenges in machine learning systems.
+   - [Paper Review](./Paper%20Review/Review3.pdf)
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+4. [DEEPSEC: A Uniform Platform for Security Analysis of Deep Learning Models](https://ieeexplore.ieee.org/document/8835375)  
+   - Summary: Introduces DEEPSEC, a platform for analyzing the security aspects of deep learning models.
+   - [Paper Review](./Paper%20Review/Review4.pdf)
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
-
-<!-- LICENSE -->
 ## License
 Not Distributed
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Not Distributed under the MIT License. See `LICENSE.txt` for more information. -->
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
 
 <!-- CONTACT -->
 ## Contact
 
 [Shivam](https://twitter.com/) - bhat41@purdue.edu
 
-ibmARTper.png
-
 <!-- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 * [Course : CS529](https://beerkay.github.io/cs529/content/syllabus/CS529.pdf)
-
