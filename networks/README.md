@@ -290,7 +290,7 @@ gcc mainC.c -o mainC
 <details >
 <summary><strong>7. Capture and Analyze Data Packets</strong><a href="./src/pcap/">[code]</a></summary>
 
-Update link costs based on current traffic volume, incorporating packet transmission rates between nodes. Execute Part 5 functionalities first at each simulation slot, followed by updating link costs. These updated costs will inform the next slot's DV updates for efficient routing.
+ Capture and analyze network packets efficiently using Wireshark, including extracting crucial information such as IP and MAC addresses, destination website IP, and identifying TCP three-way handshaking packets.
 
 ### Deliverables:
 1. **Packet Capture using Wireshark:**
