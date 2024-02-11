@@ -337,7 +337,7 @@ python lab3.py [CASE] [Input pcap file] [Destination website]
 <br>
 <em>Figure 7.2: Python script to extract network information from a pcap file</em>
 </div>
-
+</details >
 
 ## License
 Not Distributed
