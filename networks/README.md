@@ -2,20 +2,60 @@
 
 ## Description
 <section id="readme-top"></section>
-This directory contains work on various topics from computer networks and communication . Each sub-directory has it's own readme explaing in detail the work.
+This directory contains work on network communication, featuring socket programming, HTTP protocols, web server development, routing, network layer simulation, and packet analysis.
 
 ## Content
 
-- [socket and web servers](./socket/) - Socket Programming, HTTP/1.0, HTTP/2.0
-- [Network Layer](./socket/) - WIP
-- [Wireshark Pcap Analysis](./pcap/) - Python Code to analyze the captured pcap file and extract the packets needed.
+1. **Build Client-Server over Socket Programming**
+   - Client-server communication
+   - Support for different machines
+   - Multi-client support on server
+
+2. **Develop a Web Server over HTTP/1.1**
+   - Implementation of a simple web server
+   - Testing deliverables and error handling
+
+3. **Develop a Web Server over HTTP/2.0**
+   - Code modification for HTTP/2.0 support
+   - Testing and comparison with HTTP/1.1
+   - Deployment and comparison of servers
+
+4. **Network Simulator for Distance Vector Routing**
+   - DV routing algorithm implementation
+   - Initialization and updates of routing tables
+
+5. **Traffic Routing over Static and Dynamic Topologies**
+   - Traffic routing using DV routing algorithm
+   - Execution instructions and simulation slots
+
+6. **Capture and Analyze Data Packets**
+   - Packet capture using Wireshark
+   - Packet analysis for network information
+   - Python script for analyzing pcap files
+
+## Stack
+<details open>
+<summary><strong>Tools and Technologies</strong></summary>
+
+| Category                 | Tools and Technologies                      |
+|--------------------------|---------------------------------------------|
+| **Programming Languages** | C, C++, Python                                    |
+| **Network Protocols**     | TCP/IP, HTTP/1.0, HTTP/1.1, HTTP/2.0         |
+| **Networking Concepts**   | Socket Programming, Web Server Development, Distance Vector Routing Algorithm |
+| **Course Concepts**       | Client-Server Communication, Multi-threading (Pthreads), Packet Analysis, Routing Algorithms |
+| **Tools and Libraries**   | GCC Compiler, Wireshark, Pthreads           |
+| **Operating System**      | Unix/Linux                                   |
+
+For more details, please refer to the [course website](https://www.cs.purdue.edu/homes/chunyi/teaching/cs536-sp23/cs536-sp23.html).
+</details>
+
 
 ## Results
 
 The source code for all projects and analyses can be found in the [`src`](./src) directory. Below are some highlighted results from the work:
 
 <details>
-<summary><strong>1. Build Client-Server over Socket Programming</strong><a href="./socket/">[code]</a></summary>
+<summary><strong>1. Build Client-Server over Socket Programming</strong><a href="./src/socket/">[code]</a></summary>
 **Deliverables:**
   
 #### 1.1. Client-server communication:
@@ -58,7 +98,7 @@ The source code for all projects and analyses can be found in the [`src`](./src)
 </details>
 
 <details>
-<summary><strong>2. Develop a Web Server over HTTP/1.1</strong></strong><a href="./socket/">[code]</a></summary></summary>
+<summary><strong>2. Develop a Web Server over HTTP/1.1</strong></strong><a href="./src/socket/">[code]</a></summary></summary>
 
 Implement a basic web server (server1.c) with specific HTTP response functionalities, including error handling. Its able to send test files like text.html, picture.html, and bigpicture.html, and handle browser connections for testing.
 
@@ -101,7 +141,7 @@ Implement a basic web server (server1.c) with specific HTTP response functionali
 </details>
 
 <details>
-<summary><strong>3. Develop a Web Server over HTTP/2.0</strong><a href="./socket/">[code]</a></summary>
+<summary><strong>3. Develop a Web Server over HTTP/2.0</strong><a href="./src/socket/">[code]</a></summary>
 
 Implementation of HTTP/2.0 support in client-server communication for efficient retrieval of multiple webpage objects.
 
@@ -219,6 +259,58 @@ gcc mainC.c -o mainC
 </div>
 
 </details>
+
+
+<details >
+<summary><strong>7. Capture and Analyze Data Packets</strong><a href="./src/pcap/">[code]</a></summary>
+
+Update link costs based on current traffic volume, incorporating packet transmission rates between nodes. Execute Part 5 functionalities first at each simulation slot, followed by updating link costs. These updated costs will inform the next slot's DV updates for efficient routing.
+
+### Deliverables:
+1. **Packet Capture using Wireshark:**
+   - Capture WiFi packets with Wireshark, saving as a pcap file.
+
+2. **Packet Analysis with Wireshark:**
+   - Analyze captured packets to find :
+    - (a) Obtain IP and MAC address of a gateway router.
+    - (b) Determine the IP address used by google.com.
+    - (c) Identify packets relevant to intra-AS or inter-AS routing.
+    - (d) Find packets for TCP three-way handshaking.
+    - (e) Locate HTTP GET and response messages.
+
+3. **Packet Analysis Code:**
+   - Python3 Script to analyze the captured pcap file.
+        - CASE A: Gateway router IP and MAC addresses.
+        - CASE B: Destination website IP address.
+        - CASE C: Packets for TCP three-way handshaking.
+
+<div align="center">
+  <img src="img/A3-1.png" alt="Traffic Routing over a dynamic Topology" width="250px">
+  <img src="img/A3-3.png" alt="Server Client over local-machine:port" width="250px">
+  <br>
+  <img src="img/A3-2.png" alt="Server Client over local-machine:port" width="250px">
+  <img src="img/A3-4.png" alt="Server Client over local-machine:port" width="250px">
+  <br>
+  <em>Figure 7.1: Steps for a data packet transfer over a network - DHCP, ARP, TCP Handshake etc.</em>
+</div>
+
+
+
+### Execution Instructions:
+
+To compile the code, use the following command:
+
+```python
+python lab3.py [CASE] [Input pcap file] [Destination website]
+# extracts - Gateway router IP and MAC addresses, Destination website IP address. TCP three-way handshaking.
+```
+
+<div align="center">
+
+<img src="img/A3-5.png" alt="Python script to extract network information from a pcap file" width="250px">
+<br>
+<em>Figure 7.2: Python script to extract network information from a pcap file</em>
+</div>
 
 
 ## License
