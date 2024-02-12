@@ -14,10 +14,10 @@ This repository showcases projects focused on advanced database indexing techniq
 
 ## 📊 Slides
 
-### [🔗 GIN and GiST Indexing Techniques Slide Presentation](./src/GinAndGist/GinAndGist.pdf)
+### [🔗 GIN and GiST Indexing Slide](./src/GinAndGist/GinAndGist.pdf)
 
 
-### [🔗 Vectorized Database Techniques Slide Presentation](./src/Vectorization/)
+### [🔗 Vectorized Database Slide](./src/Vectorization/)
 
 <br>
 ## Detailed Project Insights
