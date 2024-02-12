@@ -154,7 +154,7 @@ Not Distributed
 <!-- CONTACT -->
 ## Contact
 
-[Shivam](https://twitter.com/) - bhat41@purdue.edu
+Shivam - [bhat41@purdue.edu](mailto:bhat41@purdue.edu)
 
 <!-- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
 
