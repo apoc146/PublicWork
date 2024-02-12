@@ -40,7 +40,7 @@ Investigates **Generalized Inverted Index (GIN)** and **Generalized Search Tree 
 
 ### 2. Survey of Vectorized Database Techniques
 
-Presents a thorough survey on SIMD (Single Instruction, Multiple Data) vectorization and its application in database systems.
+Presents a thorough survey on SIMD (Single Instruction, Multiple Data) vectorization and its application in database systems. <img src="https://www.kinetica.com/wp-content/uploads/2022/02/vwk_02.gif" align="right" width="200"/>
 
 #### Key Topics and Research Papers
 
@@ -69,13 +69,6 @@ Presents a thorough survey on SIMD (Single Instruction, Multiple Data) vectoriza
 - **Applications in Database Systems:**
   - Case study on the Quickstep database system, emphasizing vectorization for parallelism and efficiency.
     - **Research Paper:** "Quickstep: a data platform based on the scaling-up approach," by Jignesh M. Patel et al., 2018, showcases Quickstep's innovative approach.
-
-#### Conclusion
-
-Concludes with the observation that SIMD vectorization significantly enhances database system performance, supported by research and application examples.
-
-For further information, visit the [course website](https://www.cs.purdue.edu/homes/chunyi/teaching/cs536-sp23/cs536-sp23.html).
-
 ## License
 
 Not Distributed
