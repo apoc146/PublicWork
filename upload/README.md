@@ -1,29 +1,19 @@
-# Robotics
+ Robotics
 
-<!-- ![banner]() -->
+This repository contains various projects and implementations related to robotics, covering topics such as network communication, classical control, motion planning, reinforcement learning, and neural network-based approaches.
 
-<!-- ![badge]()
-![badge]()
-[![license](https://img.shields.io/github/license/:user/:repo.svg)](LICENSE)
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme) -->
-
-<!-- This is an example file with maximal choices selected.
-
-This is a long description. -->
 ## Description
-<section id="readme-top"></section>
-This directory contains work on network communication, featuring socket programming, HTTP protocols, web server development, routing, network layer simulation, and packet analysis.
 
-## Content
+This repository encompasses a range of robotics projects, including:
 
-- [Imitation Learning](https://github.com/apoc146/roboticsProject/tree/main) - RRT* guided Imitation Learning for a TurtleBot robot
-- [Controller](./controller/) - Classical Control
-- [Motion Planning](./motionPlanning/) - Sample-based motion planning
-- [Policy Gradient](./policyGradient) -  Policy gradient methods to solve gym environments(<b>CartPole-v1 and 2 Link Arm</b>) with discrete and continuous action spaces
-- [mpnet](./mpnet) - Motion Plannig Neural Networks
+- **Imitation Learning:** RRT* guided imitation learning for a TurtleBot robot.
+- **Controller:** Classical control implementations.
+- **Motion Planning:** Sample-based motion planning algorithms.
+- **Policy Gradient:** Policy gradient methods for solving gym environments, including CartPole-v1 and 2 Link Arm, with discrete and continuous action spaces.
+- **MPNet:** Implementation of motion planning neural networks.
 
-<details>
-<summary><b>1. RRT (Rapidly-exploring Random Tree) in 3D Environment</b><a href="./src/socket/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
+<details open>
+<summary><b>1. RRT (Rapidly-exploring Random Tree) in 3D Environment</b><a href="./src/motionPlanning" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
 
 - Applied to a 3-DOF UR5 robot arm for collision-free navigation to a target position.
 <div align="center">
@@ -36,7 +26,7 @@ This directory contains work on network communication, featuring socket programm
 </details>
 
 <details>
-<summary><b>2. BiRRT (Bidirectional Rapidly-exploring Random Tree) in 3D Environment</b><a href="./src/socket/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
+<summary><b>2. BiRRT (Bidirectional Rapidly-exploring Random Tree) in 3D Environment</b><a href="./src/motionPlanning/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
 
 - Implements BiRRT. Enhances efficiency by initiating search from both the start and goal positions.
 
@@ -49,8 +39,8 @@ This directory contains work on network communication, featuring socket programm
 
 </details>
 
-<details>
-<summary><b>4. RRT* (Rapidly-exploring Random Trees Star) in 2D Environment</b><a href="./src/socket/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
+<details open>
+<summary><b>4. RRT* (Rapidly-exploring Random Trees Star) in 2D Environment</b><a href="./src/motionPlanning/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
 
 <p align="center">
   Used for optimizing the path for different robot systems, including 2D point-mass, circular rigid body, and rectangular rigid body.
@@ -69,14 +59,14 @@ This directory contains work on network communication, featuring socket programm
 
 
 
-<details>
+<details open>
 <summary><b>5. PD Controller Trajectory Tracking for 2-DOF Robotic Arm</b><a href="./src/controllers/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
 
 The results of a 2-DOF robotic arm using two different PD control strategies are presented below. The first strategy corrects movement <strong>based on the end-effector's positional error</strong>, while the second strategy adjusts <strong>using joint angle errors computed via Inverse Kinematics (IK)</strong>.
 
 
 
-<summary><b>X-Y PD Controller</b><a href="./src/x-y-controller/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
+<summary><b>X-Y PD Controller</b><a href="./src/controller/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
 <p align="center">
 This controller uses the Jacobian to convert the end-effector's positional error into corrective joint torques. The target trajectory is shown in blue, and the actual ones in red.
 </p>
@@ -91,7 +81,7 @@ This controller uses the Jacobian to convert the end-effector's positional error
 
 
 
-<summary><b>IK-Based PD Controller</b><a href="./src/ik-controller/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
+<summary><b>IK-Based PD Controller</b><a href="./src/controller/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
 <p align="center">
 Differing from the X-Y approach, this method uses joint angles derived through IK for error calculation and control.
 </p>
@@ -108,8 +98,8 @@ Differing from the X-Y approach, this method uses joint angles derived through I
 
 
 
-<details>
-<summary><b>6. Autonomous Track Navigation with PID Controllers</b> <a href="./src/adaptive_controller/" style="color: #40A2E3; font-weight: bold;">[code]</a></summary>
+<details open>
+<summary><b>6. Autonomous Track Navigation with PID Controllers</b> <a href="./src/controller/" style="color: #40A2E3; font-weight: bold;">[code]</a></summary>
 
 Implements a adaptive controller to navigate a race car across varied tracks, optimizing wheel angle and thrust for maximum speed and accuracy, with performance gauged by cumulative rewards.
 
@@ -124,8 +114,8 @@ Implements a adaptive controller to navigate a race car across varied tracks, op
 
 </details>
 
-<details>
-<summary><b>7. MPNets - Neural Network based Motion Planning*</b> <a href="./src/mpnet_rrt_star/" style="color: #40A2E3; font-weight: bold;">[code]</a> [<a href="https://arxiv.org/abs/1806.05767" style="color: #40A2E3; font-weight: bold;">paper</a>]</summary>
+<details open >
+<summary><b>7. MPNets - Neural Network based Motion Planning*</b> <a href="./src/MPNET/" style="color: #40A2E3; font-weight: bold;">[code]</a> [<a href="https://arxiv.org/abs/1806.05767" style="color: #40A2E3; font-weight: bold;">paper</a>]</summary>
 
 MPNet implementation for efficient robotics motion planning in 2D/3D, integrating Dropout and Lazy Vertex Contraction for enhanced pathfinding. Combines MPNet's learning efficiency with RRT*'s optimization, showcasing pathfinding improvements in complex environments.
 
@@ -143,8 +133,8 @@ MPNet implementation for efficient robotics motion planning in 2D/3D, integratin
 
 
 
-<details>
-<summary><b>8. Reinforcement Learning with Policy Gradients for CartPole and 2 Link Arm</b></summary>
+<details open>
+<summary><b>8. Reinforcement Learning with Policy Gradients for CartPole and 2 Link Arm</b><a href="./src/policyGradient/" style="color: #40A2E3; font-weight: bold;">[code]</a></summary>
 
 We implement and compare different policy gradient methods, including:
 
@@ -187,54 +177,38 @@ We implement and compare different policy gradient methods, including:
 </details>
 
 
+<details open>
+<summary><b>9. RRT-Guided Autonomous Navigation with Imitation Learning</b> <a href="https://github.com/apoc146/roboticsProject" style="color: #40A2E3; font-weight: bold;">[code]</a> <a href="https://github.com/apoc146/roboticsProject/blob/main/CS593Report.pdf" style="color: #40A2E3; font-weight: bold;">[report]</a></summary>
 
+This project combines the RRT* algorithm and imitation learning to enable autonomous navigation in complex environments using a Turtlebot equipped with lidar in Pybullet.
 
+- Utilizes **RRT* algorithm** to map paths and gather lidar data in maze environments.
+- Implements an **imitation learning model** to predict waypoints based on local lidar inputs.
 
+<p align="center">
+  <img src="img/A4/turtle-0.gif" alt="CartPole-v1 Result" width="300" height="200"/>
+  <img src="img/A4/turtle.gif" alt="2 Link Arm Result" width="300" height="200"/>
+</p>
 
+<p align="center">
+  <em>Turtlebot navigating using the RRT* (gathered path with lidar) as an expert</em>
+</p>
 
+</details>
 
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are welcome! If you have a suggestion or enhancement, please fork the repository, make your changes, and submit a pull request.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
-
-<!-- LICENSE -->
 ## License
+
 Not Distributed
 
-<!-- Not Distributed under the MIT License. See `LICENSE.txt` for more information. -->
-
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
-
-<!-- CONTACT -->
 ## Contact
 
 [Shivam](https://twitter.com/) - bhat41@purdue.edu
 
-
-
-<!-- Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
-
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
-
-<!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-* [Purdue CS593-Robotics](https://qureshiahmed.github.io/sp23.html)
 
+* [Purdue CS593-Robotics](https://qureshiahmed.github.io/sp23.html)
