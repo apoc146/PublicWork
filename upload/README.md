@@ -193,7 +193,7 @@ We implement and compare different policy gradient methods, including:
   <img src="img/A4/arm.gif" alt="2 Link Arm Result" width="300" height="200"/>
 </p>
 <p align="center">
-  <em>Simulation results for CartPole-v1 and 2 Link Arm environments.</em>
+  <em>The CartPole agent learns to maintain balance (left), while the 2 Link Arm successfully reaches its target positions (right).</em>
 </p>
 
 </details>
