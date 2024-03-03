@@ -189,8 +189,8 @@ We implement and compare different policy gradient methods, including:
 ### Simulation Results
 
 <p align="center">
-  <img src="img/A4/cartpole.gif" alt="CartPole-v1 Result" style="width: 30%;"/>
-  <img src="img/A4/arm.gif" alt="2 Link Arm Result" style="width: 30%;"/>
+  <img src="img/A4/cartpole.gif" alt="CartPole-v1 Result" width="300" height="200"/>
+  <img src="img/A4/arm.gif" alt="2 Link Arm Result" width="300" height="200"/>
 </p>
 <p align="center">
   <em>Simulation results for CartPole-v1 and 2 Link Arm environments.</em>
