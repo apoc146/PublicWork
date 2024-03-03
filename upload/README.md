@@ -62,8 +62,8 @@ This directory contains work on network communication, featuring socket programm
   <br>
   <em>Visualization of RRT* algorithms in 2D environment for circular and rectangular rigid bodies</em>
 </div>
-
 </details>
+
 
 <details>
 <summary><b>5. PD Controller Trajectory Tracking for 2-DOF Robotic Arm</b><a href="./src/controllers/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
@@ -71,56 +71,132 @@ This directory contains work on network communication, featuring socket programm
 The results of a 2-DOF robotic arm using two different PD control strategies are presented below. The first strategy corrects movement <strong>based on the end-effector's positional error</strong>, while the second strategy adjusts <strong>using joint angle errors computed via Inverse Kinematics (IK)</strong>.
 </p>
 
-<details open>
+<details>
 <summary><b>X-Y PD Controller</b><a href="./src/x-y-controller/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
 <p>
 This controller uses the Jacobian to convert the end-effector's positional error into corrective joint torques. The target trajectory is shown in blue, and the actual ones in red.
 </p>
 
-<table>
-  <tr>
-    <td style="text-align: center; width: 25%;">
-      <img src="img/A2/armOri.png" alt="Target Trajectory" width="200"/><br>
-      <em>Figure 5.1: Target trajectory (in blue).</em>
-    </td>
-    <td style="text-align: center; width: 25%;">
-      <img src="img/A2/arm2.png" alt="Intermediate Control" width="200"/><br>
-      <em>Figure 5.2: Intermediate `kp` and `kd` values (in red).</em>
-    </td>
-    <td style="text-align: center; width: 25%;">
-      <img src="img/A2/arm1.png" alt="Best Controlled Path" width="200"/><br>
-      <em>Figure 5.3: Best controlled path (in red).</em>
-    </td>
-    <td style="text-align: center; width: 25%;">
-      <img src="img/A2/err1.png" alt="MSE Error Plot" width="200"/><br>
-      <em>Figure 5.4: MSE error plot for the best trajectory.</em>
-    </td>
-  </tr>
-</table>
+<div style="text-align: center;">
+  <img src="img/A2/armOri.png" alt="Target Trajectory" width="200"/>
+  &nbsp;
+  <img src="img/A2/arm2.png" alt="Intermediate Control" width="200"/>
+  &nbsp;
+  <img src="img/A2/arm1.png" alt="Best Controlled Path" width="200"/>
+  <br>
+  <em>Figures 5.1 to 5.3: Trajectory tracking with X-Y PD Controller; Target (blue) and Actual (red)</em>
+</div>
 </details>
 
-<details open>
+<details>
 <summary><b>IK-Based PD Controller</b><a href="./src/ik-controller/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
 <p>
 Differing from the X-Y approach, this method uses joint angles derived through IK for error calculation and control.
 </p>
 
-<table>
-  <tr>
-    <td style="text-align: center; width: 50%;">
-        <img src="img/A2/ik.png" alt="IK Trajectory Result" width="200"/><br>
-        <em>Figure 5.5: Trajectory result using IK-based PD controller.</em>
-    </td>
-    <td style="text-align: center; width: 50%;">
-        <img src="img/A2/ik_error.png" alt="IK Error Plot" width="200"/><br>
-        <em>Figure 5.6: Error plot using IK-based PD controller.</em>
-    </td>
-  </tr>
-</table>
+<div style="text-align: center;">
+  <img src="img/A2/ik.png" alt="IK Trajectory Result" width="200"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="img/A2/ik_error.png" alt="IK Error Plot" width="200" height="150"/>
+  <br>
+  <em>Figures 5.4 and 5.5: Trajectory and error plotting with IK-Based PD Controller</em>
+</div>
+</details>
 </details>
 
+
+
+<details>
+<summary><b>6. Autonomous Track Navigation with PID Controllers</b> <a href="./src/adaptive_controller/" style="color: #40A2E3; font-weight: bold;">[code]</a></summary>
+
+Implements a adaptive controller to navigate a race car across varied tracks, optimizing wheel angle and thrust for maximum speed and accuracy, with performance gauged by cumulative rewards.
+
+<div style="text-align: center;">
+  <img src="img/A3/8_pd.gif" alt="Adaptive Controller on FigureEight Track" width="200" height="120"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="img/A3/circle_pd.gif" alt="Adaptive Controller on Circle Track" width="200" height="120"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="img/A3/line_pd.gif" alt="Adaptive Controller on Linear Track" width="200" height="120"/>
+  <br>
+  <em>Demonstration of adaptive control strategy on FigureEight, Circle, and Linear tracks.</em>
+</div>
 </details>
 
+
+
+<details>
+<summary><b>7. MPNets - Neural Network based Motion Planning*</b> <a href="./src/mpnet_rrt_star/" style="color: #40A2E3; font-weight: bold;">[code]</a> [<a href="https://arxiv.org/abs/1806.05767" style="color: #40A2E3; font-weight: bold;">paper</a>]</summary>
+
+- MPNet implementation for efficient robotics motion planning in 2D/3D, integrating Dropout and Lazy Vertex Contraction for enhanced pathfinding.
+- Combines MPNet's learning efficiency with RRT*'s optimization, showcasing pathfinding improvements in complex environments.
+
+<div style="text-align: center; display: flex; flex-wrap: wrap; justify-content: center;">
+  <div style="text-align: center;">
+    <img src="img/A3/mpnet-2d.png" alt="MPNet in 2D" width="200" height="150"/>
+    <br>
+    <em>MPNet in 2D</em>
+  </div>
+  <div style="text-align: center;">
+    <img src="img/A3/mpnet-3d.png" alt="MPNet in 3D" width="200" height="150"/>
+    <br>
+    <em>MPNet in 3D</em>
+  </div>
+  <div style="text-align: center;">
+    <img src="img/A3/mpnet-pointcloud.png" alt="MPNet with Point Cloud" width="200" height="150"/>
+    <br>
+    <em>MPNet with Point Cloud</em>
+  </div>
+  <div style="text-align: center;">
+    <img src="img/A3/mpnet-org.png" alt="MPNet in 3D" width="200" height="150"/>
+    <br>
+    <em>MPNet in 3D</em>
+  </div>
+</div>
+<em style="text-align: center;">MPNet applications: 2D environment, 3D environment, and point cloud navigation.</em>
+</details>
+
+<details>
+<summary><b>8. Reinforcement Learning with Policy Gradients for CartPole and 2 Link Arm</b></summary>
+
+We implement and compare different policy gradient methods, including:
+
+- **Vanilla Policy Gradient (VPG)**: For the `CartPole-v1` environment, we use the objective function illustrated below. This represents the policy gradient, averaged over n episodes.
+  <p align="center">
+    <img src="img/A4/v1.png" alt="VPG Equation"/>
+  </p>
+
+- **Reward-to-Go Policy Gradient**: This method focuses on the future rewards for each action at time t, suitable for both environments. The equation is as follows:
+  <p align="center">
+    <img src="img/A4/v2.png" alt="Reward-to-Go Equation"/>
+  </p>
+
+- **Baseline-Subtracted Policy Gradient**: Incorporating a baseline b and normalizing rewards by standard deviation σ to reduce variance. The equation is detailed below:
+  <p align="center">
+    <img src="img/A4/v3.png" alt="Baseline-Subtracted Equation"/>
+  </p>
+
+### Results for Each Policy
+
+<p align="center">
+  <img src="img/A4/r1.png" alt="Results for VPG" width="200" height="150"/>
+  <img src="img/A4/r2.png" alt="Results for Reward-to-Go" width="200" height="150"/>
+  <img src="img/A4/r3.png" alt="Results for Baseline-Subtracted" width="200" height="150"/>
+</p>
+<p align="center">
+  <em>Top row: Equations for each policy gradient method. Bottom row: Corresponding results.</em>
+</p>
+
+### Simulation Results
+
+<p align="center">
+  <img src="img/A4/cartpole.gif" alt="CartPole-v1 Result" style="width: 30%;"/>
+  <img src="img/A4/arm.gif" alt="2 Link Arm Result" style="width: 30%;"/>
+</p>
+<p align="center">
+  <em>Simulation results for CartPole-v1 and 2 Link Arm environments.</em>
+</p>
+
+</details>
 
 
 
