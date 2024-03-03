@@ -1,15 +1,19 @@
-# MAB
+<p align="center">
+  <img src="./img/mab/mab.png" alt="MAB Image" width="400" height="300"/>
+</p>
 
-The Multi-Armed Bandit (MAB) problem, a cornerstone in the study of decision-making under uncertainty, presents a scenario akin to a gambler choosing from multiple slot machines, each with unknown payout rates. This dilemma encapsulates the critical challenge of balancing exploration and exploitation. Rooted in probability and statistics, MAB problems have far-reaching implications in various domains, from optimizing online algorithms to guiding strategic choices in business and healthcare, where decision-makers must continually adapt to evolving environments with incomplete information.
+# Multi-Armed Bandit (MAB)
+
+The Multi-Armed Bandit (MAB) problem is a fundamental challenge in decision-making under uncertainty. It mirrors a gambler facing multiple slot machines with unknown payout rates, illustrating the delicate balance between exploration and exploitation. Rooted in probability and statistics, MAB problems have broad applications, from refining online algorithms to guiding strategic decisions in business and healthcare, where adapting to evolving environments with limited information is crucial.
 
 ## Overview
 
-This research presents a detailed empirical analysis of Frequentist and Bayesian strategies in addressing the Stochastic Multi-Armed Bandit problem, with a particular focus on the mathematical intricacies involved in decision-making under uncertainty. By employing advanced mathematical models and simulations across diverse scenarios, the study offers profound insights into the performance and applicability of these algorithms. We demonstrate how different strategies fare in terms of reward maximization, best-arm identification, and computational efficiency, offering a comprehensive understanding of the exploration-exploitation trade-off.
+This research conducts an in-depth empirical analysis of Frequentist and Bayesian strategies for addressing the Stochastic Multi-Armed Bandit problem. It delves into the mathematical complexities of decision-making under uncertainty, employing advanced models and simulations across various scenarios. The study provides valuable insights into algorithm performance, focusing on reward maximization, best-arm identification, and computational efficiency, offering a nuanced understanding of the exploration-exploitation trade-off.
 
 ## Applications
 
-The study highlights the practical applications of these approaches in fields like online advertising, economics, and healthcare. It offers a detailed comparison, guiding future research in optimizing decision-making algorithms for real-world problems.
+The study underscores the practical relevance of these strategies in domains such as online advertising, economics, and healthcare. Through comprehensive comparisons, it paves the way for optimizing decision-making algorithms to tackle real-world challenges.
 
-```
-Code and Results are shown in main.ipynb
-```
+For code and results, refer to [main.ipynb](link-to-your-main.ipynb).
+</br>
+- [Report](./MAB-Report.pdf)
