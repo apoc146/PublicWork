@@ -64,45 +64,42 @@ This directory contains work on network communication, featuring socket programm
 </div>
 </details>
 
-
 <details>
 <summary><b>5. PD Controller Trajectory Tracking for 2-DOF Robotic Arm</b><a href="./src/controllers/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
-<p>
+<p align="center">
 The results of a 2-DOF robotic arm using two different PD control strategies are presented below. The first strategy corrects movement <strong>based on the end-effector's positional error</strong>, while the second strategy adjusts <strong>using joint angle errors computed via Inverse Kinematics (IK)</strong>.
 </p>
 
 <details>
 <summary><b>X-Y PD Controller</b><a href="./src/x-y-controller/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
-<p>
+<p align="center">
 This controller uses the Jacobian to convert the end-effector's positional error into corrective joint torques. The target trajectory is shown in blue, and the actual ones in red.
 </p>
 
-<div style="text-align: center;">
+<p align="center">
   <img src="img/A2/armOri.png" alt="Target Trajectory" width="200"/>
-  &nbsp;
   <img src="img/A2/arm2.png" alt="Intermediate Control" width="200"/>
-  &nbsp;
   <img src="img/A2/arm1.png" alt="Best Controlled Path" width="200"/>
   <br>
   <em>Figures 5.1 to 5.3: Trajectory tracking with X-Y PD Controller; Target (blue) and Actual (red)</em>
-</div>
+</p>
 </details>
 
 <details>
 <summary><b>IK-Based PD Controller</b><a href="./src/ik-controller/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
-<p>
+<p align="center">
 Differing from the X-Y approach, this method uses joint angles derived through IK for error calculation and control.
 </p>
 
-<div style="text-align: center;">
+<p align="center">
   <img src="img/A2/ik.png" alt="IK Trajectory Result" width="200"/>
-  &nbsp;&nbsp;&nbsp;
   <img src="img/A2/ik_error.png" alt="IK Error Plot" width="200" height="150"/>
   <br>
   <em>Figures 5.4 and 5.5: Trajectory and error plotting with IK-Based PD Controller</em>
-</div>
+</p>
 </details>
 </details>
+
 
 
 
