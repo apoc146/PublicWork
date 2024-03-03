@@ -52,17 +52,21 @@ This directory contains work on network communication, featuring socket programm
 <details>
 <summary><b>4. RRT* (Rapidly-exploring Random Trees Star) in 2D Environment</b><a href="./src/socket/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
 
-- Used for optimizing the path for different robot systems, including 2D point-mass, circular rigid body, and rectangular rigid body.
-<div style="text-align: center;">
-  <img src="img/A1/rrt.png" alt="RRT" width="210px" height="160px">
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="img/A1/rrtstarcircle.png" alt="RRT*" width="210px" height="160px">
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="img/A1/rrtstarbox.png" alt="RRT*" width="210px" height="160px">
-  <br>
+<p align="center">
+  Used for optimizing the path for different robot systems, including 2D point-mass, circular rigid body, and rectangular rigid body.
+</p>
+
+<p align="center">
+  <img src="img/A1/rrt.png" alt="RRT" width="210px" height="160px"/>
+  <img src="img/A1/rrtstarcircle.png" alt="RRT*" width="210px" height="160px"/>
+  <img src="img/A1/rrtstarbox.png" alt="RRT*" width="210px" height="160px"/>
+</p>
+
+<p align="center">
   <em>Visualization of RRT* algorithms in 2D environment for circular and rectangular rigid bodies</em>
-</div>
+</p>
 </details>
+
 
 
 <details>
