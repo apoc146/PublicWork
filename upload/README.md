@@ -1,6 +1,6 @@
- Robotics
+# Robotics
 
-This repository contains various projects and implementations related to robotics, covering topics such as network communication, classical control, motion planning, reinforcement learning, and neural network-based approaches.
+This repository contains various projects and implementations related to robotics, covering topics such as classical control, motion planning, reinforcement learning, and neural network-based approaches.
 
 ## Description
 
@@ -33,7 +33,7 @@ This repository encompasses a range of robotics projects, including:
 </details>
 
 <details>
-<summary><b>3. Path Smoothing for BiRRT</b><a href="./src/socket/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
+<summary><b>3. Path Smoothing for BiRRT</b><a href="./src/motionPlanning/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
 
 - Refines the path found by BiRRT to minimize the number of nodes and create a more direct route.
 
@@ -60,7 +60,7 @@ This repository encompasses a range of robotics projects, including:
 
 
 <details open>
-<summary><b>5. PD Controller Trajectory Tracking for 2-DOF Robotic Arm</b><a href="./src/controllers/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
+<summary><b>5. PD Controller Trajectory Tracking for 2-DOF Robotic Arm</b><a href="./src/controller/" style="color: #40A2E3; font-weight: bold;"> [code]</a></summary>
 
 The results of a 2-DOF robotic arm using two different PD control strategies are presented below. The first strategy corrects movement <strong>based on the end-effector's positional error</strong>, while the second strategy adjusts <strong>using joint angle errors computed via Inverse Kinematics (IK)</strong>.
 
