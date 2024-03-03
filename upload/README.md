@@ -54,11 +54,11 @@ This directory contains work on network communication, featuring socket programm
 
 - Used for optimizing the path for different robot systems, including 2D point-mass, circular rigid body, and rectangular rigid body.
 <div style="text-align: center;">
-  <img src="img/A1/rrt.png" alt="RRT" width="250px" height="250px">
+  <img src="img/A1/rrt.png" alt="RRT" width="210px" height="160px">
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="img/A1/rrtstarcircle.png" alt="RRT*" width="250px" height="250px">
+  <img src="img/A1/rrtstarcircle.png" alt="RRT*" width="210px" height="160px">
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="img/A1/rrtstarbox.png" alt="RRT*" width="250px" height="250px">
+  <img src="img/A1/rrtstarbox.png" alt="RRT*" width="210px" height="160px">
   <br>
   <em>Visualization of RRT* algorithms in 2D environment for circular and rectangular rigid bodies</em>
 </div>
@@ -111,49 +111,35 @@ Differing from the X-Y approach, this method uses joint angles derived through I
 
 Implements a adaptive controller to navigate a race car across varied tracks, optimizing wheel angle and thrust for maximum speed and accuracy, with performance gauged by cumulative rewards.
 
-<div style="text-align: center;">
-  <img src="img/A3/8_pd.gif" alt="Adaptive Controller on FigureEight Track" width="200" height="120"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="img/A3/circle_pd.gif" alt="Adaptive Controller on Circle Track" width="200" height="120"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="img/A3/line_pd.gif" alt="Adaptive Controller on Linear Track" width="200" height="120"/>
-  <br>
-  <em>Demonstration of adaptive control strategy on FigureEight, Circle, and Linear tracks.</em>
-</div>
+<p align="center">
+  <img src="img/A3/8_pd.gif" alt="Adaptive Controller on FigureEight Track" width="300" height="200"/>
+  <img src="img/A3/circle_pd.gif" alt="Adaptive Controller on Circle Track" width="300" height="200"/>
+  <img src="img/A3/line_pd.gif" alt="Adaptive Controller on Linear Track" width="300" height="200"/>
+</p>
+<p align="center">
+  <em>PID Controller strategy on FigureEight, Circle, and Linear tracks
+</p>
+
 </details>
-
-
 
 <details>
 <summary><b>7. MPNets - Neural Network based Motion Planning*</b> <a href="./src/mpnet_rrt_star/" style="color: #40A2E3; font-weight: bold;">[code]</a> [<a href="https://arxiv.org/abs/1806.05767" style="color: #40A2E3; font-weight: bold;">paper</a>]</summary>
 
-- MPNet implementation for efficient robotics motion planning in 2D/3D, integrating Dropout and Lazy Vertex Contraction for enhanced pathfinding.
-- Combines MPNet's learning efficiency with RRT*'s optimization, showcasing pathfinding improvements in complex environments.
+MPNet implementation for efficient robotics motion planning in 2D/3D, integrating Dropout and Lazy Vertex Contraction for enhanced pathfinding. Combines MPNet's learning efficiency with RRT*'s optimization, showcasing pathfinding improvements in complex environments.
 
-<div style="text-align: center; display: flex; flex-wrap: wrap; justify-content: center;">
-  <div style="text-align: center;">
-    <img src="img/A3/mpnet-2d.png" alt="MPNet in 2D" width="200" height="150"/>
-    <br>
-    <em>MPNet in 2D</em>
-  </div>
-  <div style="text-align: center;">
-    <img src="img/A3/mpnet-3d.png" alt="MPNet in 3D" width="200" height="150"/>
-    <br>
-    <em>MPNet in 3D</em>
-  </div>
-  <div style="text-align: center;">
-    <img src="img/A3/mpnet-pointcloud.png" alt="MPNet with Point Cloud" width="200" height="150"/>
-    <br>
-    <em>MPNet with Point Cloud</em>
-  </div>
-  <div style="text-align: center;">
-    <img src="img/A3/mpnet-org.png" alt="MPNet in 3D" width="200" height="150"/>
-    <br>
-    <em>MPNet in 3D</em>
-  </div>
-</div>
-<em style="text-align: center;">MPNet applications: 2D environment, 3D environment, and point cloud navigation.</em>
+<p align="center">
+  <img src="img/A3/mpnet-2d.png" alt="MPNet in 2D" width="200" height="150"/>
+  <img src="img/A3/mpnet-3d.png" alt="MPNet in 3D" width="200" height="150"/>
+  <img src="img/A3/mpnet-pointcloud.png" alt="MPNet with Point Cloud" width="200" height="150"/>
+  <img src="img/A3/mpnet-org.png" alt="MPNet in 3D" width="200" height="150"/>
+</p>
+<p align="center">
+  <em>MPNet applications: 2D environment, 3D environment, and point cloud navigation.</em>
+</p>
 </details>
+
+
+
 
 <details>
 <summary><b>8. Reinforcement Learning with Policy Gradients for CartPole and 2 Link Arm</b></summary>
