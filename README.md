@@ -1,4 +1,4 @@
-# Main Repository Contents
+# Contents
 
 This repository contains some of my work. Each directory contains distinct projects and studies:
 
