@@ -26,9 +26,9 @@ The `convolution` directory contains projects related to image processing using 
 </details>
 
 <details open>
-<summary><strong>2. Variational Autoencoder (VAE)</strong><a href="./vae/">[code]</a></summary>
+<summary><strong>2. Variational Autoencoder (VAE) and Conditional-VAE</strong><a href="./vae/">[code]</a></summary>
 
-The `vae` directory contains projects related to variational autoencoders (VAEs) for generative modeling.
+The `vae` directory contains projects related to variational autoencoders (VAEs) and CVAE for generative modeling.
 
 #### Description:
 
