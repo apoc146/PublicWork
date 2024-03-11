@@ -5,14 +5,11 @@
 This repository contains code for implementing Variational Autoencoders (VAEs) and Conditional Variational Autoencoders (CVAEs) for unsupervised learning tasks, generative modeling, and data reconstruction.
 
 <div align="center">
-  <div>
-    <img src="img/vae_result.png" alt="VAE" width="410px">
-    <img src="img/cvae_result.png" alt="CVAE" width="400px">
-  </div>
-  <div align="center">
-    <em>Visualization of VAE and CVAE on moons, circles, and blobs datasets.</em>
-  </div>
+  <img src="img/vae_result.png" alt="VAE" width="410px">
+  <img src="img/cvae_result.png" alt="CVAE" width="400px">
 </div>
+
+<em>Visualization of VAE and CVAE on moons, circles, and blobs datasets.</em>
 
 
 
