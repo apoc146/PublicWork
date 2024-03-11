@@ -6,8 +6,26 @@ This repository contains various deep learning projects focusing on image proces
 
 ### Projects
 
+
 <details open>
-<summary><strong>1. Convolution for Image Processing<a href="./convolution/">[code]</a></strong></summary>
+<summary><strong>1. Multi-Arm Bandit</strong>a href="./MultiArmedBandit/">[code]</a></summary>
+
+The `multi_arm_bandit` directory contains projects related to reinforcement learning using multi-arm bandit algorithms.
+
+#### Description:
+
+- Implementation of epsilon-greedy, UCB1, and Thompson Sampling algorithms for solving multi-armed bandit problems.
+
+#### Results:
+
+<div align="center">
+</div>
+</details>
+
+
+
+<details open>
+<summary><strong>2. Convolution for Image Processing<a href="./convolution/">[code]</a></strong></summary>
 
 The `convolution` directory contains projects related to image processing using convolutional neural networks (CNNs).
 
@@ -26,7 +44,7 @@ The `convolution` directory contains projects related to image processing using 
 </details>
 
 <details open>
-<summary><strong>2. Variational Autoencoder (VAE) and Conditional-VAE</strong><a href="./vae/">[code]</a></summary>
+<summary><strong>3. Variational Autoencoder (VAE) and Conditional-VAE</strong><a href="./vae/">[code]</a></summary>
 
 The `vae` directory contains projects related to variational autoencoders (VAEs) and CVAE for generative modeling.
 
@@ -45,6 +63,4 @@ The `vae` directory contains projects related to variational autoencoders (VAEs)
     <em>Visualization of VAE and CVAE on moons, circles, and blobs datasets.</em>
   </div>
 </div>
-
-
 </details>
