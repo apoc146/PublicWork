@@ -8,7 +8,7 @@ This repository contains various deep learning projects focusing on image proces
 
 
 <details open>
-<summary><strong>1. Multi-Arm Bandit</strong>a href="./MultiArmedBandit/">[code]</a></summary>
+<summary><strong>1. Multi-Arm Bandit</strong><a href="./MultiArmedBandit/">[code]</a></summary>
 
 The `multi_arm_bandit` directory contains projects related to reinforcement learning using multi-arm bandit algorithms.
 
